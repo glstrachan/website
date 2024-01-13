@@ -3,7 +3,13 @@
 const dialog = [
     { "text": "glstrachan@website", "class": "textpurple" }, { "text": ":" }, { "text": " ~$ ", "class": "textcyan" },
     { "text": "./introduction.bash\n" },
-    { "text": "Hi, I'm Graydon Strachan, a Computer Engineering student at the University of British Columbia. I have a passion for tackling complex problems, with experience ranging from custom language compilers to autonomous aircraft systems.\n" },
+    { "text": "Hi, I'm " },
+    { "text": "Graydon Strachan", "class": "textbold" },
+    { "text": ", a " },
+    { "text": "Computer Engineering", "class": "textbold" },
+    { "text": " student at the " },
+    { "text": "University of British Columbia", "class": "textbold" },
+    { "text": ". I have a passion for tackling complex problems, with experience ranging from custom language compilers to machine learning and biomedical devices.\n" },
     { "text": "glstrachan@website", "class": "textpurple" }, { "text": ":" }, { "text": " ~$ ", "class": "textcyan" },
     { "text": "cd ./projects\n" },
     { "text": "customCompiler.txt\n" },
@@ -27,6 +33,8 @@ window.onload = () => {
     let line = document.createElement('div');
     terminal.appendChild(line);
 
+    document.getElementById('cursorpos').innerHTML = `${new Date().getHours()}:${new Date().getMinutes()}`;
+
     let charIndex = 0;
     let dialogIndex = 0;
 
@@ -34,7 +42,7 @@ window.onload = () => {
     cursor.classList.add('cursor');
     cursor.innerHTML = '▌';
 
-    const typeChar = () => {
+    const typeChar = () => {    
         if (dialogIndex < dialog.length) {
             const d = dialog[dialogIndex];
             const text = d.text;
@@ -55,7 +63,12 @@ window.onload = () => {
                 line.appendChild(cursor);
 
                 charIndex++;
-                setTimeout(typeChar, typingDelay);
+
+                terminal.scrollTop = terminal.scrollHeight;
+
+                if(text[charIndex] === ' ') setTimeout(typeChar, typingDelay * 2);
+                else setTimeout(typeChar, typingDelay * (Math.random() * 0.7 + 0.5));
+                
             } else {
                 charIndex = 0;
                 dialogIndex++;
