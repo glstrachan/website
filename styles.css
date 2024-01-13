@@ -15,17 +15,23 @@ body {
 
     overscroll-behavior: none;
 }
+
+::selection {
+    background: rgba(255, 255, 255, 0.3);
+}
+
 body {
     -ms-overflow-style: none;
     /* Internet Explorer 10+ */
     scrollbar-width: none;
     /* Firefox */
 }
-
 body::-webkit-scrollbar {
     display: none;
     /* Safari and Chrome */
 }
+
+
 
 .darkoverlay {
     position: fixed;
@@ -72,7 +78,7 @@ body::-webkit-scrollbar {
 }
 
 .spacer {
-    height: 25px;
+    margin-top: 25px;
 }
 
 .mainbox {
