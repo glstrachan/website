@@ -98,6 +98,7 @@ body::-webkit-scrollbar {
 #terminal {
     height: 100%;
     overflow: hidden;
+    word-break: break-all;
 }
 
 .terminaltext {

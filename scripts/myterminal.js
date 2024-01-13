@@ -7,10 +7,10 @@ const dialog = [
     { "text": "glstrachan@website", "class": "textpurple" }, { "text": ":" }, { "text": " ~$ ", "class": "textcyan" },
     { "text": "cd ./projects\n" },
     { "text": "customCompiler.txt\n" },
+    { "text": "javaServer.txt\n" },
     { "text": "neuralNetworkLibrary.txt\n" },
     { "text": "neuralSDFs.txt\n" },
     { "text": "rustTypingTest.txt\n" },
-    { "text": "javaServer.txt\n" },
     { "text": "simpleRISCMachine.txt\n" },
     { "text": "glstrachan@website", "class": "textpurple" }, { "text": ":" }, { "text": " ~$ ", "class": "textcyan" },
 ]
