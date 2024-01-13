@@ -225,4 +225,8 @@ div::-webkit-scrollbar {
     .mainbox {
         margin-bottom: 25px;
     }
+
+    body {
+        font-size: 18px;
+    }
 }
