@@ -89,14 +89,22 @@ body::-webkit-scrollbar {
     justify-content: space-between;
 }
 
-.terminal {
+#terminal {
     height: 100%;
     overflow: hidden;
 }
 
-.terminal p {
+.terminaltext {
     margin: 0px;
     line-height: 40px;
+}
+
+.textpurple {
+    color: #BF94E4;
+}
+
+.textcyan {
+    color: rgb(153, 211, 164);
 }
 
 .statusbar {
@@ -155,4 +163,20 @@ body::-webkit-scrollbar {
     font-size: 20px;
     padding: 5px;
     text-decoration: none;
+}
+
+.cursor {
+    animation: cursorAnimation 2s infinite steps(2, start);
+    color: #ffffff4f;
+    opacity: 0.5;
+    line-height: 40px;
+}
+
+@keyframes cursorAnimation {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
 }
