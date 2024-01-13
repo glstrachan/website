@@ -1,0 +1,155 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'JetBrains Mono', monospace;
+    color: #ffffff4f;
+    font-size: 26px;
+    height: 100%;
+
+    background-image: url('images/background.png');
+    background-attachment: fixed;
+}
+
+body {
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+}
+
+.darkoverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 19, 0.552);
+    /* black with 50% opacity */
+    z-index: -1;
+}
+
+.content {
+    padding: 0px 50px 0px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.topbox {
+    background-color: #212437e8;
+    border-radius: 0 0 6px 6px;
+    padding: 25px;
+    outline: 1px solid #4f4f4f;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.name {
+    font-size: 55px;
+    color: #FFF;
+}
+
+.title {
+    font-style: italic;
+}
+
+.topboxright {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.spacer {
+    height: 25px;
+}
+
+.mainbox {
+    background-color: #212437e8;
+    border-radius: 6px;
+    padding: 25px;
+    outline: 1px solid #4f4f4f;
+
+    margin-bottom: 50px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.terminal {
+    height: 100%;
+    overflow: hidden;
+}
+
+.terminal p {
+    margin: 0px;
+    line-height: 40px;
+}
+
+.statusbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background-color: #3b4752ba;
+}
+
+.statuspart {
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+}
+
+.statusbarbold, .statusbartext {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.statusbarbold {
+    color: #212437;
+    background-color: #BF94E4;
+    padding: 0px 10px 0px 10px;
+}
+
+.statusbartext {
+    color: #BF94E4;
+    background-color: #ffffff1b;
+    padding: 0px 10px 0px 10px;
+}
+
+.arrowpurple {
+    background-color: #ffffff1b;
+    fill: #BF94E4;
+    width: 20px;
+}
+
+.arrowclear {
+    fill: #ffffff1b;
+    width: 20px;
+}
+
+.toplink {
+    text-decoration: underline;
+}
+
+.icon {
+    color: white;
+    font-size: inherit;
+    font-size: 20px;
+    padding: 5px;
+    text-decoration: none;
+}
