@@ -123,6 +123,7 @@ body::-webkit-scrollbar {
 
 .statusbarbold {
     color: #212437;
+    font-weight: bold;
     background-color: #BF94E4;
     padding: 0px 10px 0px 10px;
 }
