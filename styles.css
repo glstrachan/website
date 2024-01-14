@@ -219,11 +219,15 @@ div::-webkit-scrollbar {
     }
 
     .content {
-        padding: 0px 25px 0px 25px;
+        padding: 0px 20px 0px 20px;
     }
 
     .mainbox {
-        margin-bottom: 25px;
+        margin-bottom: 20px;
+    }
+
+    .terminaltext {
+        line-height: 28px;
     }
 
     body {

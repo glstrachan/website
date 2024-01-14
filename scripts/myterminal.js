@@ -12,28 +12,34 @@ const dialog = [
     { "text": ". I have a passion for tackling complex problems, with experience ranging from custom language compilers to machine learning and biomedical devices.\n" },
     { "text": "glstrachan@website", "class": "textpurple" }, { "text": ":" }, { "text": " ~$ ", "class": "textcyan" },
     { "text": "cd ./projects\n" },
-    { "text": "customCompiler.txt\n" },
-    { "text": "javaServer.txt\n" },
-    { "text": "neuralNetworkLibrary.txt\n" },
-    { "text": "neuralSDFs.txt\n" },
-    { "text": "rustTypingTest.txt\n" },
-    { "text": "simpleRISCMachine.txt\n" },
+    { "text": "glstrachan@website", "class": "textpurple" }, { "text": ":" }, { "text": " ~$ ", "class": "textcyan" },
+    { "text": "ls\n" },
+    { "text": "customCompiler.txt\n", "onclick": "displayProject('customCompiler')" },
+    { "text": "javaServer.txt\n", "onclick": "displayProject('javaServer')" },
+    { "text": "neuralNetworkLibrary.txt\n", "onclick": "displayProject('neuralNetworkLibrary')" },
+    { "text": "neuralSDFs.txt\n", "onclick": "displayProject('neuralSDFs')" },
+    { "text": "rustTypingTest.txt\n", "onclick": "displayProject('rustTypingTest')" },
+    { "text": "simpleRISCMachine.txt\n", "onclick": "displayProject('simpleRISCMachine')" },
     { "text": "glstrachan@website", "class": "textpurple" }, { "text": ":" }, { "text": " ~$ ", "class": "textcyan" },
 ]
 
 const typingDelay = 40;
 
 window.onload = () => {
+    document.getElementById('cursorpos').innerHTML = `${new Date().getHours()}:${new Date().getMinutes()}`;
+
     const currentDate = new Date().toString().split(' GMT')[0];
     const dateDialog = { text: `Login: ${currentDate}\n` }
 
     dialog.unshift(dateDialog);
 
+    displayText();
+}
+
+const displayText = () => {
     const terminal = document.getElementById('terminal');
     let line = document.createElement('div');
     terminal.appendChild(line);
-
-    document.getElementById('cursorpos').innerHTML = `${new Date().getHours()}:${new Date().getMinutes()}`;
 
     let charIndex = 0;
     let dialogIndex = 0;
@@ -52,11 +58,18 @@ window.onload = () => {
                     terminal.appendChild(line);
                     line = document.createElement('div');
                     terminal.appendChild(line);
+
+                    if(dialog[dialogIndex].text.includes('cd')) {
+                        const dir = document.getElementById('directory');
+                        dir.innerHTML = dir.innerHTML + dialog[dialogIndex].text.split('cd .')[1].trim() + '/';
+                    }
                 }
 
                 const letter = document.createElement('a');
 
                 if (d.class) letter.classList.add(d.class);
+                if(d.onclick) letter.setAttribute('onclick', d.onclick);
+
                 letter.innerHTML = text[charIndex];
                 letter.classList.add('terminaltext');
                 line.appendChild(letter);
@@ -79,4 +92,15 @@ window.onload = () => {
     }
 
     if (dialogIndex < dialog.length) typeChar();
+}
+
+const displayProject = (project) => {
+    switch(project) {
+        case 'customCompiler':
+            dialog = [];
+            break;
+        case 'javaServer':
+            dialog = [];
+            break;
+    }
 }
