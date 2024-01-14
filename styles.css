@@ -53,10 +53,11 @@ div::-webkit-scrollbar {
 }
 
 .topbox {
-    background-color: #212437e8;
+    background-color: #212437af;
     border-radius: 0 0 6px 6px;
     padding: 25px;
     outline: 1px solid #4f4f4f;
+    backdrop-filter: blur(6px);
 
     display: flex;
     justify-content: space-between;
@@ -82,10 +83,11 @@ div::-webkit-scrollbar {
 }
 
 .mainbox {
-    background-color: #212437e8;
+    background-color: #212437af;
     border-radius: 6px;
     padding: 25px;
     outline: 1px solid #4f4f4f;
+    backdrop-filter: blur(6px);
 
     margin-bottom: 50px;
     height: 100%;
@@ -148,6 +150,14 @@ div::-webkit-scrollbar {
     font-weight: bold;
     background-color: #BF94E4;
     padding: 0px 10px 0px 10px;
+}
+
+#cursorpos {
+    border-radius: 0px 4px 4px 0px;
+}
+
+#statusmode {
+    border-radius: 4px 0px 0px 4px;
 }
 
 .statusbartext {
