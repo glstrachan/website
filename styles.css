@@ -244,3 +244,9 @@ div::-webkit-scrollbar {
         font-size: 18px;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .mainbox, .topbox {
+        background-color: #212437d9;
+    }
+}
