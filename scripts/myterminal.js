@@ -59,10 +59,10 @@ const displayText = () => {
                     line = document.createElement('div');
                     terminal.appendChild(line);
 
-                    if(dialog[dialogIndex].text.includes('cd')) {
+                    /*if(dialog[dialogIndex].text.includes('cd')) {
                         const dir = document.getElementById('directory');
                         dir.innerHTML = dir.innerHTML + dialog[dialogIndex].text.split('cd .')[1].trim() + '/';
-                    }
+                    }*/
                 }
 
                 const letter = document.createElement('a');
