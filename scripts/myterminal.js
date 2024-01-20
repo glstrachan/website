@@ -23,7 +23,7 @@ const dialog = [
     { "text": "glstrachan@website", "class": "textpurple" }, { "text": ":" }, { "text": " ~$ ", "class": "textcyan" },
 ]
 
-const typingDelay = 40;
+const typingDelay = 20;
 
 window.onload = () => {
     document.getElementById('cursorpos').innerHTML = `${new Date().getHours()}:${new Date().getMinutes()}`;
