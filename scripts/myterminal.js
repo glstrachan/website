@@ -24,6 +24,14 @@ const dialog = [
 const typingDelay = 20;
 
 window.onload = () => {
+    const highResImage = new Image();
+    highResImage.src = 'images/background-large.png';
+
+    highResImage.onload = () => {
+        // Replace the low-res background with the high-res one
+        document.body.style.backgroundImage = `url('images/background-large.png')`;
+    };
+
     document.getElementById('cursorpos').innerHTML = `${new Date().getHours()}:${new Date().getMinutes()}`;
 
     const currentDate = new Date().toString().split(' GMT')[0];
