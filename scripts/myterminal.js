@@ -24,12 +24,47 @@ const dialog = [
 const typingDelay = 20;
 
 window.onload = () => {
+    function getTimeOfDay() {
+        const hour = new Date().getHours();
+        if (hour >= 6 && hour < 12) {
+            return 'morning';
+        } else if (hour >= 12 && hour < 18) {
+            return 'afternoon';
+        } else if (hour >= 18 && hour < 21) {
+            return 'evening';
+        } else {
+            return 'sunset';
+        }
+    }
+
+    const timeOfDay = getTimeOfDay();
+
+    const backgrounds = {
+        morning: {
+            small: 'images/background-normal-small.png',
+            big: 'images/background-normal-big.png'
+        },
+        afternoon: {
+            small: 'images/background-normal-small.png',
+            big: 'images/background-normal-big.png'
+        },
+        evening: {
+            small: 'images/background-evening-small.png',
+            big: 'images/background-evening-big.png'
+        },
+        sunset: {
+            small: 'images/background-sunset-small.png',
+            big: 'images/background-sunset-big.png'
+        }
+    };
+
+    document.body.style.backgroundImage = `url('${backgrounds[timeOfDay].small}')`;
+
     const highResImage = new Image();
-    highResImage.src = 'images/background-large.png';
+    highResImage.src = backgrounds[timeOfDay].big;
 
     highResImage.onload = () => {
-        // Replace the low-res background with the high-res one
-        document.body.style.backgroundImage = `url('images/background-large.png')`;
+        document.body.style.backgroundImage = `url('${backgrounds[timeOfDay].big}')`;
     };
 
     document.getElementById('cursorpos').innerHTML = `${new Date().getHours()}:${new Date().getMinutes()}`;
