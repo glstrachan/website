@@ -15,7 +15,7 @@ const dialog = [
     { "text": "glstrachan@website", "class": "textpurple" }, { "text": ":" }, { "text": " ~$ ", "class": "textcyan" },
     { "text": "ls\n" },
     { "text": "amd_emulation_2025.c\n", "onclick": "displayProject('neuralNetworkLibrary')" },
-    { "text": "microchip_rtl_design_2024.sv\n", "onclick": "displayProject('customCompiler')" },
+    { "text": "microchip_2024.sv\n", "onclick": "displayProject('customCompiler')" },
     { "text": "ubc_emerging_media_lab_unreal_develop_2024.cpp\n", "onclick": "displayProject('javaServer')" },
     { "text": "ubc_aerodesign_sensors_developer_2022_2024.c\n", "onclick": "displayProject('neuralNetworkLibrary')" },
     { "text": "glstrachan@website", "class": "textpurple" }, { "text": ":" }, { "text": " ~$ ", "class": "textcyan" },
