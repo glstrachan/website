@@ -9,19 +9,20 @@ const dialog = [
     { "text": "Computer Engineering", "class": "textbold" },
     { "text": " student at the " },
     { "text": "University of British Columbia", "class": "textbold" },
-    { "text": ". I have a passion for tackling complex problems, with experience ranging from custom language compilers to machine learning and biomedical devices. Right now I'm big into graphics programming!\n" },
+    { "text": ". I have a passion for tackling complex problems, with experience ranging from custom language compilers to machine learning and biomedical devices. Right now I'm big into graphics programming!⚡\n" },
     { "text": "glstrachan@website", "class": "textpurple" }, { "text": ":" }, { "text": " ~$ ", "class": "textcyan" },
     { "text": "cd ./experience\n" },
     { "text": "glstrachan@website", "class": "textpurple" }, { "text": ":" }, { "text": " ~$ ", "class": "textcyan" },
     { "text": "ls\n" },
+    { "text": "nvidia_software.cpp\n" },
     { "text": "amd_emulation_2025.c\n", "onclick": "displayProject('neuralNetworkLibrary')" },
     { "text": "microchip_2024.sv\n", "onclick": "displayProject('customCompiler')" },
-    { "text": "ubc_emerging_media_lab_unreal_develop_2024.cpp\n", "onclick": "displayProject('javaServer')" },
-    { "text": "ubc_aerodesign_sensors_developer_2022_2024.c\n", "onclick": "displayProject('neuralNetworkLibrary')" },
+    { "text": "ubc_eml_2024.cpp\n", "onclick": "displayProject('javaServer')" },
+    { "text": "ubc_aerodesign_2022_2024.c\n", "onclick": "displayProject('neuralNetworkLibrary')" },
     { "text": "glstrachan@website", "class": "textpurple" }, { "text": ":" }, { "text": " ~$ ", "class": "textcyan" },
 ]
 
-const typingDelay = 20;
+const typingDelay = 10;
 
 window.onload = () => {
     function getTimeOfDay() {
